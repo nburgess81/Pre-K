@@ -7,7 +7,57 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
-@interface ViewController : UIViewController
+
+
+@interface ViewController : UIViewController <AVAudioPlayerDelegate>
+
+
+{
+	   
+    
+    CGPoint lastPoint;
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    CGFloat brush;
+    CGFloat opacity;
+    BOOL mouseSwiped;
+    
+    
+    
+    __weak IBOutlet UIImageView *mainImage;
+    
+    __weak IBOutlet UIImageView *tempDrawImage;
+    
+    
+    
+    
+    
+    AVAudioPlayer *theAudio;
+    // Audio for buttons
+    
+}
+
+
+- (IBAction)colorChosen:(id)sender;
+
+- (IBAction)eraseCanvas:(id)sender;
+
+-(IBAction) navigationButton;
+
+@property (strong, nonatomic) IBOutlet UIButton *clouds;
+
 
 @end
+
+
+
+
+
+
+
+
+
+
