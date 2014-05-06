@@ -31,7 +31,7 @@
     
     __weak IBOutlet UIImageView *tempDrawImage;
     
-    
+    IBOutlet UIButton *stars;
     
     
     
@@ -45,9 +45,11 @@
 
 - (IBAction)eraseCanvas:(id)sender;
 
--(IBAction) navigationButton;
+- (IBAction) navigationButton;
 
-@property (strong, nonatomic) IBOutlet UIButton *clouds;
+- (IBAction) homeButton;
+
+
 
 
 @end

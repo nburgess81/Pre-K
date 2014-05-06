@@ -33,13 +33,23 @@
     [super viewDidLoad];
     
     
-    [self.clouds setBackgroundImage: [UIImage
-        animatedImageNamed:@"clouds-" duration:6.0]
+    [self->stars setBackgroundImage: [UIImage
+        animatedImageNamed:@"stars-"  duration:0.8]
         forState:UIControlStateNormal];
+    
+    
     
     
 	
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -128,7 +138,7 @@
 
 
 
-// Play the Home Button Sound
+// Play the Arrow Button Sound
 
 - (IBAction) navigationButton {
     
@@ -142,6 +152,24 @@
     
     
 }
+
+
+// Play the Home Button Sound
+
+- (IBAction) homeButton {
+    
+    NSString *path = nil;
+    
+    path = [[NSBundle mainBundle] pathForResource:@"home" ofType:@"mp3"];
+    theAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [theAudio prepareToPlay];
+    theAudio.delegate = self;
+    [theAudio play];
+    
+    
+}
+
+
 
 
 //Drawing code
