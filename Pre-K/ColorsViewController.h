@@ -1,0 +1,55 @@
+//
+//  ColorsViewController.h
+//  Pre-K
+//
+//  Created by Nathan Burgess on 5/9/14.
+//  Copyright (c) 2014 Nathan Burgess. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
+
+
+
+@interface ColorsViewController : UIViewController <AVAudioPlayerDelegate>
+
+
+{
+    
+    
+    CGPoint lastPoint;
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    CGFloat brush;
+    CGFloat opacity;
+    BOOL mouseSwiped;
+    
+    
+    
+    
+    
+    
+    
+    AVAudioPlayer *theAudio;
+    // Audio for buttons
+    
+}
+
+
+- (IBAction)colorChosen:(id)sender;
+
+- (IBAction)eraseCanvas:(id)sender;
+
+- (IBAction) navigationButton;
+
+- (IBAction) homeButton;
+
+
+
+
+
+
+
+
+@end
