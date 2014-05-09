@@ -27,7 +27,11 @@
     
     
     
+    __weak IBOutlet UIImageView *mainImage;
     
+    __weak IBOutlet UIImageView *tempDrawImage;
+    
+    IBOutlet UIButton *stars;
     
     
     
@@ -53,3 +57,5 @@
 
 
 @end
+
+
